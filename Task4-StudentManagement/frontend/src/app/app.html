@@ -1,0 +1,51 @@
+<div class="container">
+
+  <h1>Student Management System</h1>
+
+  <!-- Search -->
+  <div class="card">
+    <input [(ngModel)]="searchText" placeholder="Search by name">
+    <button (click)="search()">Search</button>
+    <button class="secondary" (click)="loadStudents()">Reset</button>
+  </div>
+
+  <!-- Form -->
+  <div class="card">
+    <input [(ngModel)]="newStudent.name" placeholder="Name">
+    <input [(ngModel)]="newStudent.rollNumber" placeholder="Roll Number">
+    <input [(ngModel)]="newStudent.grade" placeholder="Grade">
+
+    <button (click)="addStudent()">
+      {{ editMode ? 'Update Student' : 'Add Student' }}
+    </button>
+  </div>
+
+  <!-- Table -->
+  <div class="card">
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Roll</th>
+          <th>Grade</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let s of students">
+          <td>{{s.id}}</td>
+          <td>{{s.name}}</td>
+          <td>{{s.rollNumber}}</td>
+          <td>{{s.grade}}</td>
+          <td>
+            <button class="edit" (click)="editStudent(s)">Edit</button>
+            <button class="delete" (click)="deleteStudent(s.id!)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
