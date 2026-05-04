@@ -1,6 +1,11 @@
 # CODSOFT Internship Projects
 
-This repository contains all the tasks completed as part of the CodSoft Internship, covering Java, OOP concepts, and full-stack development.
+![Java](https://img.shields.io/badge/Java-ED8B00?style=flat&logo=openjdk&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat&logo=spring-boot&logoColor=white)
+![Angular](https://img.shields.io/badge/Angular-DD0031?style=flat&logo=angular&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white)
+
+This repository contains all the tasks completed as part of the **CodSoft Java Programming Internship**, progressing from core Java fundamentals to full-stack web development.
 
 ---
 
@@ -8,70 +13,82 @@ This repository contains all the tasks completed as part of the CodSoft Internsh
 
 ### 🔹 Task 1: Number Guessing Game
 
-* Console-based Java application
-* Random number generation
-* User interaction and input handling
+📂 [`Task 1-NumberGame/`](Task%201-NumberGame/)
+
+* Console-based Java application + Swing GUI version
+* Random number generation with limited attempts (5 tries)
+* Feedback on each guess: Too high / Too low
+* **Tech:** Java SE, Scanner, Random, Swing
 
 ---
 
 ### 🔹 Task 2: Student Grade Calculator
 
-* Java application with GUI (Swing)
-* Calculates grades based on marks
-* Interactive user interface
+📂 [`Task2-StudentGradeCalculator/`](Task2-StudentGradeCalculator/)
+
+* Console + GUI application that calculates total, average, highest/lowest marks
+* Grade assignment (A–F) with input validation (0–100 range)
+* **Tech:** Java SE, Scanner, Arrays, Swing
 
 ---
 
 ### 🔹 Task 3: ATM System
 
-* Object-Oriented Java implementation
-* Features:
+📂 [`Task3-ATM/`](Task3-ATM/)
 
-  * Deposit / Withdraw
-  * Balance check
-  * Transaction handling
+* Object-Oriented ATM simulation with `BankAccount` class
+* Features: Deposit, Withdraw, Balance check, Last transaction
 
-#### ⭐ Enhanced Version:
+#### ⭐ Enhanced Version (`Task3-ATM/Task3-ATM-Enhanced/`)
 
-* Authentication (PIN-based login)
-* Transaction history
-* Money transfer between accounts
+* PIN-based authentication with 3-attempt lockout
+* Full transaction history per account
+* Money transfer between accounts via `Bank` manager class
+* **Tech:** Java SE, OOP (Encapsulation, Classes), Scanner
 
 ---
 
 ### 🔹 Task 4: Student Management System (Full Stack)
 
-* Full-stack web application
+📂 [`Task4-StudentManagement/`](Task4-StudentManagement/)
 
-**Backend:**
+A full-stack CRUD web application to manage student records.
 
-* Spring Boot
-* REST APIs
-* JPA + H2 Database
+**Backend — Spring Boot**
+* REST APIs for Add / Update / Delete / Search students
+* Spring Data JPA with H2 in-memory database
+* Runs on: `http://localhost:8080`
 
-**Frontend:**
+**Frontend — Angular**
+* TypeScript + component-based UI
+* Form-based record management with real-time updates
+* Runs on: `http://localhost:4200`
 
-* Angular
-* TypeScript
-* Component-based UI
+**Quick start:**
 
-**Features:**
+```bash
+# Backend
+cd Task4-StudentManagement/backend
+mvn spring-boot:run
 
-* Add, update, delete students
-* Search functionality
-* Clean UI
-* API integration
+# Frontend (new terminal)
+cd Task4-StudentManagement/frontend
+npm install && ng serve
+```
 
 ---
 
 ## 🏗 Tech Stack
 
-* Java
-* Spring Boot
-* Angular
-* HTML / CSS
-* MySQL / H2
-* Git & GitHub
+| Layer | Technologies |
+|---|---|
+| Language | Java SE |
+| GUI | Java Swing |
+| Backend | Spring Boot, Spring Data JPA |
+| Frontend | Angular, TypeScript, HTML/CSS |
+| Database | H2 (in-memory) |
+| Build | Maven, npm |
+| VCS | Git & GitHub |
 
 ---
 
@@ -79,20 +96,41 @@ This repository contains all the tasks completed as part of the CodSoft Internsh
 
 ```text
 CODSOFT/
- ├── Task1-NumberGame/
+ ├── Task 1-NumberGame/
+ │    ├── NumberGame.java         ← Console version
+ │    ├── NumberGameGUI.java      ← Swing GUI version
+ │    └── Readme.md
  ├── Task2-StudentGradeCalculator/
+ │    ├── StudentGradeCalculator.java
+ │    ├── StudentGradeGUI.java
+ │    └── Readme.md
  ├── Task3-ATM/
- ├── Task4-StudentManagement/
+ │    ├── ATM.java
+ │    ├── BankAccount.java
+ │    ├── README.md
+ │    └── Task3-ATM-Enhanced/    ← Auth + transfer + history
+ │         ├── ATM.java
+ │         ├── Bank.java
+ │         └── BankAccount.java
+ └── Task4-StudentManagement/
+      ├── backend/               ← Spring Boot REST API
+      ├── frontend/              ← Angular UI
+      └── Readme.md
 ```
 
 ---
 
 ## 📌 Note
 
-This repository reflects my learning journey from basic Java programs to building full-stack applications.
+This repository reflects a learning journey from basic Java programs through OOP design to
+building a full-stack web application — the four tasks form a deliberate progression in
+complexity and architecture.
 
 ---
 
-## 🔗 GitHub
+## 👤 Author
 
-https://github.com/Anuj18m/CODSOFT
+**Anuj Vijay Mhatre** · IT Student, TCET (Class of 2027)
+
+[![GitHub](https://img.shields.io/badge/GitHub-Anuj18m-181717?style=flat&logo=github)](https://github.com/Anuj18m)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-anujmhatre17-0077B5?style=flat&logo=linkedin)](https://linkedin.com/in/anujmhatre17)
